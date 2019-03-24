@@ -20,6 +20,7 @@ from .models import Post
 def home(request):
     #return HttpResponse('<h1>Blog Home</h1>')
     context={
+        # 'posts': posts
         'posts': Post.objects.all() #Can also pass list of dictionaries here
     }
     return render(request, 'blog/home.html', context)
